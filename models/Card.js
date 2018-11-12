@@ -14,9 +14,6 @@ module.exports = function(sequelize, DataTypes) {
         number: DataTypes.INTEGER,
         artist: DataTypes.STRING,
         rarity: DataTypes.STRING,
-        series: DataTypes.STRING,
-        set:  DataTypes.STRING,
-        setCode: DataTypes.STRING,
         retreatCost: DataTypes.STRING,
         text: DataTypes.STRING,
         types: DataTypes.STRING,
@@ -28,8 +25,7 @@ module.exports = function(sequelize, DataTypes) {
 
     Card.associate = function(models) {
         Card.belongsTo(models.Set, {
-            foreignKey: "setId",
-            onDelete: 'cascade'
+            foreignKey: "setId"
         });
     };
 
