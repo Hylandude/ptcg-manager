@@ -1,3 +1,10 @@
+#misc
+config/DBconfig.json
+FoilInventory.csv
+output.txt
+
+# npm
 node_modules
-.env
 package-lock.json
+*.log
+*.gz
