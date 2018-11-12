@@ -2,21 +2,22 @@
   "name": "tcg-database",
   "version": "0.0.0",
   "private": true,
+  "main": "main.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w mysql2",
+    "test": "jasmine"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "dotenv": "^6.0.0",
-    "ejs": "~2.5.7",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "pokemontcgsdk": "^1.1.0",
-    "sequelize": "^4.39.0",
     "bluebird": "^3.5.1",
-    "mysql2": "^1.4.2",
-    "request": "^2.83.0"
+    "dotenv": "^6.0.0",
+    "electron": "^3.0.5",
+    "jasmine": "^3.2.0",
+    "pokemontcgsdk": "^1.1.0",
+    "request": "^2.83.0",
+    "sequelize": "^4.39.0"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.8.2"
   }
 }
